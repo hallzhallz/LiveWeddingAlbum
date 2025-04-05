@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="LiveWeddingAlbum.Photo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             x:Name="PhotoRoot" Opacity="0">
+    <Control.Triggers>
+        <EventTrigger RoutedEvent="Control.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" BeginTime="0:0:02.0" Duration="{Binding ElementName=PhotoRoot, Path=EffectDuration}" 
+            AutoReverse="False" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Control.Triggers>
+    <Control.Resources>
+        <Storyboard x:Name="sBob" x:Key="sRemoveEffect">
+            <DoubleAnimation
+            Storyboard.TargetProperty="Opacity"
+            From="1.00" To="0.0"
+            Duration="{Binding ElementName=PhotoRoot, Path=EffectDuration}" 
+            AutoReverse="False" />
+        </Storyboard>
+    </Control.Resources>
+    
+    <Grid Background="White">
+        <Grid.Effect >
+            <DropShadowEffect BlurRadius="5" Color="Black" ShadowDepth="1" Direction="0" />
+        </Grid.Effect>
+            <Border BorderBrush="White" BorderThickness="20" HorizontalAlignment="Left" Margin="0,0,0,0" Name="bPhoto" VerticalAlignment="Top" >
+                <Grid Background="White" VerticalAlignment="Top">
+                    <Image x:Name="iPhoto" Stretch="Uniform" VerticalAlignment="Top" />
+                    <Grid Name="gLogoAndLabel" VerticalAlignment="Bottom" >
+                        <Image x:Name="iLogo" Stretch="Uniform" HorizontalAlignment="Left" />
+                        <Viewbox Name="vbLabel" HorizontalAlignment="Left" Stretch="Uniform" >
+                            <TextBlock x:Name="tbLabel" Text="" TextAlignment="Left" HorizontalAlignment="Left" />
+                        </Viewbox>
+                    </Grid>
+                </Grid>
+            </Border>
+    </Grid>
+</UserControl>
