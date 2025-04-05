@@ -1,5 +1,7 @@
 # LiveWeddingAlbum
 
+![Live Wedding Album Running](/screenshot.png)
+
 LiveWeddingAlbum shows wedding photos during your wedding reception.
 Displays a photo montage of photos full screen for display at a wedding. Will also add photos to the album from inserted memory cards or drives.
 ## Download
@@ -7,6 +9,9 @@ Displays a photo montage of photos full screen for display at a wedding. Will al
 [LiveWeddingAlbum.zip](https://raw.githubusercontent.com/hallzhallz/LiveWeddingAlbum/4b576f1dc05892ac7389bf12a44d3863e6bc4a7c/LiveWeddingAlbum.zip)
 
 ## Usage
+
+![Live Wedding Album Config](/LiveWeddingAlbum.png)
+
 To install simpy **unzip** the file to a folder and **run setup.exe**.
 
 Select a logo and background if required.
